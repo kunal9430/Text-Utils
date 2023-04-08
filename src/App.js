@@ -1,16 +1,15 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-// import TextForm from './Components/TextForm';
+import TextForm from './Components/TextForm';
 import { useState }  from 'react';
 import Alert from './Components/Alert';
 import About from './Components/About';
 // To use react router use:
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 
 function App() {
@@ -51,8 +50,8 @@ function App() {
 }
 
   return (
-<>
-  {/* // <Router> */}
+
+  <Router>
     {/* navbar */}
     <Navbar title="TextUtils" aboutText="About TextUtils" mode = {mode} toggleMode={toogleMode} setMode={setMode} showAlert={showAlert} />
 
@@ -63,21 +62,19 @@ function App() {
 
     {/* using react router */}
     
-     
-          {/* <Routes> */}
+    <div className="container my-3">
+          <Routes>
             {/* About */}
-            {/* <Route exact path='/about' element={<About/>}/> */}
-            {/* <Route exact path='/' element={<TextForm heading="Enter your text here..!" mode={mode} showAlert={showAlert}/>}/> */}
-          {/* </Routes> */}
-          {/* </Routes> */}
-          {/* <div className="container my-3">
-          <TextForm heading="Try Text-Utils- Word Counter, Character Counter, Remove Extra Space" mode={mode} showAlert={showAlert}/>
-        </div> */}
-        <About mode={mode}/>
-  {/* // </Router> */}
+            <Route exact path='/about' element={<About mode={mode}/>}/>
+            <Route exact path='/' element={<TextForm heading="Try Text-Utils- Word Counter, Character Counter, Remove Extra Space" mode={mode} showAlert={showAlert}/>}/>
+          </Routes>
+                
+                
+    </div>
+          
+  </Router>
 
-  </>
-    
+
   );
 }
 
