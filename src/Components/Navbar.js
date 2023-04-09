@@ -47,20 +47,34 @@ export default function Navbar(props) {
             <Link className="nav-link" to="/about">{props.aboutText}</Link>
           </li>
         </ul>
-        {/* <form className="d-flex" role="search">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form> */}
-        <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'}`}>
+          {/* <div className="d-flex" style={{flexDirection:'row',}}>
+            <div className="bg-primary rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer',}} onClick={()=>{props.toggleMode('primary')}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-danger rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer',}} onClick={()=>{props.toggleMode('danger')}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-success rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer',}} onClick={()=>{props.toggleMode('success')}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-warning rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer',}} onClick={()=>{props.toggleMode('warning')}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-light rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer', border:'2px solid Gray'}} onClick={()=>{props.toggleMode('light')}}></div>
+          </div>
+          <div className="d-flex">
+            <div className="bg-dark rounded mx-2 my-1" style={{height:'30px', width:'30px', cursor: 'pointer',border:'2px solid Gray'}} onClick={()=>{props.toggleMode('dark')}}></div>
+          </div> */}
+        <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'} mx-2 my-1 my-1`}>
         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
-        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode==='light'?"Enable Dark mode":"Enable Light mode"}</label>
-        {/* Button for more Themes */}
+        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode==='light'?"Enable Dark Mode":"Enable Light Mode"}</label>
       </div>
-          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-primary my-2 mx-3`} onClick={handelDarkMode1}>Primary</button>
-          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-secondary my-2 mx-3`}  onClick={handelDarkMode2}>Secondary</button>
-          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-success my-2 mx-3`}  onClick={handelDarkMode3}>Success</button>
-          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-danger my-2 mx-3`}  onClick={handelDarkMode4}>Danger</button>
-          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-warning my-2 mx-3`}  onClick={handelDarkMode5}>Warning</button>
+        {/* Button for more Themes */}
+          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-primary my-1 mx-3`} onClick={handelDarkMode1}>Primary</button>
+          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-secondary my-1 mx-3`}  onClick={handelDarkMode2}>Secondary</button>
+          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-success my-1 mx-3`}  onClick={handelDarkMode3}>Success</button>
+          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-danger my-1 mx-3`}  onClick={handelDarkMode4}>Danger</button>
+          <button type="button" className={`btn ${props.mode==='dark'?'btn-outline':'btn'}-warning my-1 mx-3`}  onClick={handelDarkMode5}>Warning</button>
       </div>
     </div>
   </nav>  
